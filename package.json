@@ -4,7 +4,7 @@
   "description": "Handlebars transformations",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "multi='spec=-' mocha --recursive --compilers coffee:coffee-script/register -R mocha-multi test"
   },
   "keywords": [
     "handlebars"
@@ -12,11 +12,14 @@
   "author": "Wilfred Springer",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.0.6"
+    "flatmap": "0.0.3",
+    "handlebars": "^4.0.6",
+    "lodash": "^4.17.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "coffee-script": "^1.11.1",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "mocha-multi": "^0.9.1"
   }
 }
